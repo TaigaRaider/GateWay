@@ -72,7 +72,7 @@ export const SectionAbout = () => {
           Whether you need a full platform or a precise component, I work best
           on problems that demand both depth and care.
         </p>
-        <button className="btn btn-primary" onClick={() => window.location.href = "mailto:adetunji.timothy@gmail.com"}>Start now</button>
+        <a href="mailto:adetunji.timothy@gmail.com" className="btn btn-primary">Start now</a>
       </div>
     </section>
   );
