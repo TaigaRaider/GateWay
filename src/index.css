@@ -36,6 +36,21 @@
   --tracking-wide: 0.08em;
 }
 
+.night-light {
+  --bg-color: #fcf6f0;
+  --fg-color: #5c3a21;
+  --primary-text-color: #2c1810;
+  --alt-text-color: #7a5c43;
+  --accent: #5c3a21;
+  --accent-light: #8b6f4a;
+  --slabs: #8b6f4a;
+  --muted-slabs: #a0845c;
+  --card-bg: #fcf6f0;
+  --border-color: #c4a882;
+  --placeholder-bg: #ede0d0;
+  --focus-outline: #c8a96e;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -45,6 +60,9 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  transition:
+    background-color 0.4s ease,
+    color 0.6s ease;
 }
 
 body {
@@ -53,6 +71,9 @@ body {
   background-color: var(--bg-color);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  transition:
+    background-color 0.4s ease,
+    color 0.6s ease;
 }
 
 #root {

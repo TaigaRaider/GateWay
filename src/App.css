@@ -57,8 +57,12 @@ img {
 #logo {
   max-height: 3rem;
   width: auto;
+  mix-blend-mode: multiply;
 }
-
+.nameTag {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
 .navlinks {
   display: flex;
   gap: 2rem;
@@ -536,4 +540,42 @@ img {
   .cta-banner {
     padding: 1.5rem 1rem;
   }
+}
+
+/* ─── Theme Toggle ─── */
+.theme-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--primary-text-color);
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
+  z-index: 200;
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.theme-toggle:active {
+  transform: scale(0.97);
+}
+
+.theme-toggle-icon {
+  transition: transform 0.4s ease;
 }
