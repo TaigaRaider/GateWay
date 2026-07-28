@@ -477,6 +477,7 @@ img {
   .portfolio-card {
     grid-template-columns: 1fr;
     gap: 1rem;
+    
   }
 
   .portfolio-card > *:first-child {

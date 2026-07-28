@@ -1,7 +1,7 @@
 export const NavBar = () => {
   return (
     <nav className="NavBar">
-      <img src="src/assets/logo.png" id="logo" />
+      <img src="images/hero.png" id="logo" />
       <ul className="navlinks">
         <li className="navElement">
           <a href="#about">Me</a>
