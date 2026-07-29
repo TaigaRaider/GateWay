@@ -37,8 +37,6 @@ export const SectionProjects = () => {
     },
   ];
 
-  const displayed = showAll ? projects : projects.slice(0, 3);
-
   return (
     <section className="section" id="projects">
       <div className="portfolio-header">
@@ -50,9 +48,9 @@ export const SectionProjects = () => {
         </p>
       </div>
       <div className="portfolio-grid">
-        {displayed.map((project, i) => (
+        {projects.map((project, i) => (
           <div
-            className="portfolio-card"
+            className={`portfolio-card${i >= 3 && !showAll ? " collapsed" : ""}`}
             key={i}
             style={{ marginTop: i % 2 === 1 ? "2rem" : "0" }}
           >
