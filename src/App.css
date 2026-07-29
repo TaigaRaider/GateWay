@@ -320,6 +320,11 @@ img {
   display: block;
 }
 
+.portfolio-card-media iframe,
+iframe.portfolio-card-media {
+  border: none;
+}
+
 .portfolio-card-content {
   display: flex;
   flex-direction: column;
