@@ -315,14 +315,10 @@ img {
 .portfolio-card-media {
   width: 100%;
   aspect-ratio: 16 / 10;
+  object-fit: cover;
   background: var(--placeholder-bg);
   border: 1px solid var(--border-color);
   display: block;
-}
-
-.portfolio-card-media iframe,
-iframe.portfolio-card-media {
-  border: none;
 }
 
 .portfolio-card-content {

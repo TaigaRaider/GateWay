@@ -9,30 +9,16 @@ export const SectionProjects = () => {
       desc: "An Intra-Mural Sports League Manager built to help increase student participation and trust in On-Campus Sports leagues.",
       tags: ["Python, Textual"],
       suffix: "campus-cup",
-      prod_link: "https://github.com/TaigaRaider/campus-cup",
-      svg: (
-        <iframe
-          className="portfolio-card-media"
-          src="https://github.com/TaigaRaider/campus-cup"
-          title="CAMPUS-CUP"
-          loading="lazy"
-        />
-      ),
+      img: "/images/campus-cup.png",
     },
     {
       title: "The Tabloid",
       desc: "A properly persistent notes taking app, complete with all CRUD functionality.",
       tags: ["Node.js", "React", "Express"],
       suffix: "Busybody",
+      img: "/images/tabloid.png",
       prod_link: "https://thetabloid.vercel.app",
-      svg: (
-        <iframe
-          className="portfolio-card-media"
-          src="https://thetabloid.vercel.app"
-          title="The Tabloid"
-          loading="lazy"
-        />
-      ),
+      img: "/images/tabloid.png",
     },
     {
       title: "Calc",
@@ -40,14 +26,7 @@ export const SectionProjects = () => {
       tags: ["HTML", "CSS", "JavaScript"],
       suffix: "CACA",
       prod_link: "https://cucurella.vercel.app",
-      svg: (
-        <iframe
-          className="portfolio-card-media"
-          src="https://cucurella.vercel.app"
-          title="Calc"
-          loading="lazy"
-        />
-      ),
+      img: "/images/calculator.png",
     },
     {
       title: "RainBoard",
@@ -55,14 +34,7 @@ export const SectionProjects = () => {
       tags: ["React", "CSS"],
       suffix: "RainBoard",
       prod_link: "https://rain-board-mauve.vercel.app/",
-      svg: (
-        <iframe
-          className="portfolio-card-media"
-          src="https://rain-board-mauve.vercel.app"
-          title="RainBoard"
-          loading="lazy"
-        />
-      ),
+      img: "/images/rainboard.png",
     },
   ];
 
@@ -85,7 +57,13 @@ export const SectionProjects = () => {
             key={i}
             style={{ marginTop: i % 2 === 1 ? "2rem" : "0" }}
           >
-            {project.svg}
+            {project.img && (
+              <img
+                className="portfolio-card-media"
+                src={project.img}
+                alt={project.title}
+              />
+            )}
             <div className="portfolio-card-content">
               <h3>{project.title}</h3>
               <p>{project.desc}</p>
@@ -122,7 +100,10 @@ export const SectionProjects = () => {
         ))}
       </div>
       <div className="portfolio-footer">
-        <button className="btn btn-outline" onClick={() => setShowAll((s) => !s)}>
+        <button
+          className="btn btn-outline"
+          onClick={() => setShowAll((s) => !s)}
+        >
           {showAll ? "Show less" : "View all"}
         </button>
       </div>
