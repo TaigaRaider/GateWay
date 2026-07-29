@@ -16,7 +16,6 @@ export const SectionProjects = () => {
       desc: "A properly persistent notes taking app, complete with all CRUD functionality.",
       tags: ["Node.js", "React", "Express"],
       suffix: "Busybody",
-      img: "/images/tabloid.png",
       prod_link: "https://thetabloid.vercel.app",
       img: "/images/tabloid.png",
     },

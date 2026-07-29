@@ -23,14 +23,17 @@ export const SectionExpertise = () => {
             fontWeight="700"
             fontFamily="system-ui, -apple-system, sans-serif"
             letterSpacing="1"
+            className="animate-glow"
           >
             Node.js
           </text>
           <path
             d="M50 75 h60"
-            stroke="var(--border-color)"
-            strokeWidth="1"
-            strokeDasharray="3 3"
+            stroke="var(--primary-text-color)"
+            strokeWidth="2"
+            strokeDasharray="120"
+            strokeDashoffset="0"
+            className="animate-dash"
           />
         </svg>
       ),
@@ -45,41 +48,48 @@ export const SectionExpertise = () => {
           preserveAspectRatio="xMidYMid meet"
         >
           <rect width="160" height="110" fill="var(--placeholder-bg)" />
-          <ellipse
-            cx="80"
-            cy="55"
-            rx="40"
-            ry="14"
-            fill="none"
-            stroke="var(--border-color)"
-            strokeWidth="2"
-          />
-          <ellipse
-            cx="80"
-            cy="55"
-            rx="40"
-            ry="14"
-            fill="none"
-            stroke="var(--border-color)"
-            strokeWidth="2"
-            transform="rotate(60 80 55)"
-          />
-          <ellipse
-            cx="80"
-            cy="55"
-            rx="40"
-            ry="14"
-            fill="none"
-            stroke="var(--border-color)"
-            strokeWidth="2"
-            transform="rotate(-60 80 55)"
-          />
+          <g className="animate-rotate-slow">
+            <ellipse
+              cx="80"
+              cy="55"
+              rx="40"
+              ry="14"
+              fill="none"
+              stroke="var(--primary-text-color)"
+              strokeWidth="2"
+            />
+          </g>
+          <g className="animate-rotate-medium">
+            <ellipse
+              cx="80"
+              cy="55"
+              rx="40"
+              ry="14"
+              fill="none"
+              stroke="var(--primary-text-color)"
+              strokeWidth="2"
+              transform="rotate(60 80 55)"
+            />
+          </g>
+          <g className="animate-rotate-fast">
+            <ellipse
+              cx="80"
+              cy="55"
+              rx="40"
+              ry="14"
+              fill="none"
+              stroke="var(--primary-text-color)"
+              strokeWidth="2"
+              transform="rotate(-60 80 55)"
+            />
+          </g>
           <circle
             cx="80"
             cy="55"
             r="7"
             fill="var(--primary-text-color)"
             opacity="0.3"
+            className="animate-pulse"
           />
           <circle
             cx="80"
@@ -101,18 +111,22 @@ export const SectionExpertise = () => {
           preserveAspectRatio="xMidYMid meet"
         >
           <rect width="160" height="110" fill="var(--placeholder-bg)" />
-          <path
-            d="M65 20h30l20 35-20 35H65L45 55l20-35z"
-            fill="none"
-            stroke="var(--border-color)"
-            strokeWidth="2"
-          />
+          <g className="animate-rotate-hex">
+            <path
+              d="M65 20h30l20 35-20 35H65L45 55l20-35z"
+              fill="none"
+              stroke="var(--primary-text-color)"
+              strokeWidth="2"
+            />
+          </g>
           <path
             d="M55 35h30l15 25-15 25H55L40 60l15-25z"
             fill="none"
-            stroke="var(--border-color)"
-            strokeWidth="1.5"
-            strokeDasharray="3 3"
+            stroke="var(--primary-text-color)"
+            strokeWidth="2"
+            strokeDasharray="120"
+            strokeDashoffset="0"
+            className="animate-dash"
           />
           <text
             x="75"
@@ -122,6 +136,7 @@ export const SectionExpertise = () => {
             fontSize="14"
             fontWeight="bold"
             fontFamily="monospace"
+            className="animate-float"
           >
             Py
           </text>

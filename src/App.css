@@ -282,6 +282,86 @@ img {
   line-height: 1.5;
 }
 
+/* ─── Expertise SVG Animations ─── */
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+@keyframes spin-medium {
+  to { transform: rotate(-360deg); }
+}
+@keyframes spin-fast {
+  to { transform: rotate(360deg); }
+}
+@keyframes dash-draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.15); }
+}
+@keyframes float-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes text-glow {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; filter: drop-shadow(0 0 6px currentColor); }
+}
+
+.expertise-card-img {
+  overflow: visible;
+}
+
+.expertise-card-img .animate-rotate-slow {
+  transform-origin: 80px 55px;
+  animation: spin-slow 20s linear infinite;
+}
+.expertise-card-img .animate-rotate-medium {
+  transform-origin: 80px 55px;
+  animation: spin-medium 14s linear infinite;
+}
+.expertise-card-img .animate-rotate-fast {
+  transform-origin: 80px 55px;
+  animation: spin-fast 8s linear infinite;
+}
+
+.expertise-card:hover .expertise-card-img .animate-rotate-slow {
+  animation-duration: 6s;
+}
+.expertise-card:hover .expertise-card-img .animate-rotate-medium {
+  animation-duration: 4s;
+}
+.expertise-card:hover .expertise-card-img .animate-rotate-fast {
+  animation-duration: 2.5s;
+}
+
+.expertise-card:hover .expertise-card-img .animate-dash {
+  stroke-dashoffset: 120;
+  animation: dash-draw 0.8s ease-out forwards;
+}
+
+.expertise-card .expertise-card-img .animate-pulse {
+  transform-origin: 80px 55px;
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+.expertise-card:hover .expertise-card-img .animate-pulse {
+  animation-duration: 1s;
+}
+
+.expertise-card:hover .expertise-card-img .animate-float {
+  animation: float-bob 1.5s ease-in-out infinite;
+}
+
+.expertise-card:hover .expertise-card-img .animate-glow {
+  animation: text-glow 1.5s ease-in-out infinite;
+}
+
+.expertise-card:hover .expertise-card-img .animate-rotate-hex {
+  transform-origin: 80px 55px;
+  animation: spin-slow 8s linear infinite;
+}
+
 /* ─── Portfolio / Projects ─── */
 .portfolio-header {
   text-align: center;
@@ -315,7 +395,7 @@ img {
 .portfolio-card-media {
   width: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
+  object-fit: contain;
   background: var(--placeholder-bg);
   border: 1px solid var(--border-color);
   display: block;
